@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Include the iframe-resizer library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.3.2/iframeResizer.min.js"></script>
+    <title>YT Downloader</title>
+</head>
+<body>
+    <header>
+        <h1 class="title">YT Downloader</h1>
+        <ul>
+            <li><a href="pure_js_url_to_video_converter.html">Home</a></li>
+        </ul>
+    </header>
+
+    <section>
+        <h1>Youtube Downloader</h1>
+        <div class="link-container">
+            <label for="">Video Link:</label>
+            <input type="text" class="link" name="link" placeholder="Enter Video Link" required>
+        </div>
+        <div class="format-container">
+            <label for="">Format:</label>
+            <select class="format" required>
+               <option value="mp3">MP3</option>
+               <option value="mp4a">144p</option> 
+               <option value="360">360p</option>
+               <option value="480">480p</option> 
+               <option value="720">720p</option> 
+               <option value="1080">1080p</option> 
+               <option value="4k">4k</option>
+               <option value="8k">8k</option> 
+            </select>
+        </div>
+        <div class="button-container">
+            <button class="btn" type="submit">Start</button>
+        </div>
+        <!-- The iframe container -->
+        <div id="iframe-container"></div>
+    </section>
+
+    <script type="text/javascript">
+        $(".btn").click(function(){
+            var link = $(".link").val();
+            var format = $(".format").children("option:selected").val();
+            var src = "" + link + "=" + format + "";
+            downloadVideo(link, format);
+        });
+
+        function downloadVideo(link, format){
+            // Create a new iframe and append it to the container
+            var iframeSrc = 'https://api.vevioz.com/apis/widgetv2?url=' + link + '&f=' + format;
+            var iframeCode = '<iframe id="widgetv2Api" style="width: 100%; height: 100%; max-width: 100%; border: none;" src="' + iframeSrc + '"></iframe>';
+            $('#iframe-container').html(iframeCode);
+
+            // Configure and initialize iframe-resizer
+            iFrameResize({ log: false, checkOrigin: false }, '#widgetv2Api');
+        }
+    </script>
+
+</body>
+</html>
