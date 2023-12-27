@@ -8,7 +8,7 @@ YT Downloader is a simple web-based tool that leverages the Vevioz API to allow 
   
 - **Responsive Design:** The web interface is designed to be responsive, ensuring a seamless user experience across different devices and screen sizes.
 
-- **Vevioz API Integration:** The project utilizes the vevioz API for handling video downloads. The API simplifies the process of fetching video content and makes it easy to embed video previews directly on the page.
+- **Vevioz API Integration:** The project utilizes the Vevioz API for handling video downloads. The API simplifies the process of fetching video content and makes it easy to embed video previews directly on the page.
 
 ## Getting Started
 
