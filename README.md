@@ -1,6 +1,6 @@
 # YT Downloader
 
-YT Downloader is a simple web-based tool that leverages the vevioz API to allow users to download YouTube videos effortlessly. This project provides an intuitive user interface for entering a YouTube video link and selecting the desired format for downloading.
+YT Downloader is a simple web-based tool that leverages the Vevioz API to allow users to download YouTube videos effortlessly. This project provides an intuitive user interface for entering a YouTube video link and selecting the desired format for downloading.
 
 ## Features
 
@@ -29,7 +29,7 @@ YT Downloader is a simple web-based tool that leverages the vevioz API to allow 
 5. The download will start, and the button will be replaced by the video preview.
 6. API Used: Vevioz API
 
-**YT Downloader utilizes the Vevioz API for fetching video content and handling downloads. The vevioz API simplifies the process of integrating YouTube video downloads into web applications.**
+**YT Downloader utilizes the Vevioz API for fetching video content and handling downloads. The Vevioz API simplifies the process of integrating YouTube video downloads into web applications.**
 
 ## More information about the API
 For more information about the **Vevioz API**, visit https://api.vevioz.com.
