@@ -20,6 +20,7 @@ YT Downloader is a simple web-based tool that leverages the Vevioz API to allow 
    git clone https://github.com/DenjiMakesGames/Project-MP3Converter.git
    ```
 2. **Open the HTML in your preferred web browser eg. Google Chrome, Mozilla Firefox, Microsoft Edge.**
+3. **Open your code in VS Code or any text editor, and then use Localhost, or Live Server to run your code in the browser.**
 
 ## Usage
 1. Open index.html in your web browser.
